@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 
 const state = {
     todos: [
@@ -15,7 +15,12 @@ const state = {
 const getters = {
     allTodos: (state) => state.todos
 };
-const actions = {};
+const actions = {
+    async fetchTodos() {
+        const res  = await axios.get('https://jsonplaceholder.typicode.com/todos')
+        console.log(res.data);
+    }
+};
 const mutations = {};
 
 export default {
