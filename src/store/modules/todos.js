@@ -1,16 +1,7 @@
 import axios from "axios";
 
 const state = {
-  todos: [
-    {
-      id: 1,
-      title: "Task 1",
-    },
-    {
-      id: 2,
-      title: "Task 2",
-    },
-  ],
+  todos: [],
 };
 const getters = {
   allTodos: (state) => state.todos,
